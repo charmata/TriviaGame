@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  text-align: center;
+}
+.container::before {
+  content: "";
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110%;
+  height: 110%;
+  filter: blur(5px);
+}
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+#content {
+  background-color: rgba(249, 239, 144, 0.7);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
