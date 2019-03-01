@@ -19,5 +19,27 @@
     ></script>
     <script src="./assets/javascript/game.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="content" class="col-12">
+          <h1 class="display-title">Movie Trivia!</h1>
+          <p>Time Remaining: <span id="time"></span> Seconds</p>
+          <form id="quiz" action="" method="GET">
+            <fieldset>
+              <legend>What is the highest grossing film of all time?</legend>
+              <input type="radio" id="titanic" name="q-1" />
+              <label for="titanic">Titanic</label>
+              <input type="radio" id="frozen" name="q-1" />
+              <label for="frozen">Frozen</label>
+              <input type="radio" id="avatar" name="q-1" />
+              <label for="avatar">Avatar</label>
+              <input type="radio" id="black-panther" name="q-1" />
+              <label for="black-panther">Black Panther</label>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
