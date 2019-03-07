@@ -1,6 +1,6 @@
 var data = {
   answers: [3, 4],
-  userAnswers: [],
+  userAnswers: [0, 0],
   timeLeft: 120
 };
 
@@ -25,6 +25,11 @@ function newQuiz() {
 
 function endQuiz() {
   clearInterval(data.counter);
+
+  $("input:checked").each(function(i) {
+    data.userAnswers[$(this).attr("name") - 1] = $(this).val();
+  });
+  console.log(data.userAnswers);
 }
 
 $(document).ready(function() {
@@ -32,5 +37,6 @@ $(document).ready(function() {
 
   $("#submit").on("click", function(e) {
     e.preventDefault();
+    endQuiz();
   });
 });
