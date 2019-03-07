@@ -33,3 +33,11 @@ body {
 label {
   margin-right: 10px;
 }
+#submit {
+  margin-top: 20px;
+}
+.score {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+}

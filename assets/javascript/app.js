@@ -26,10 +26,28 @@ function newQuiz() {
 function endQuiz() {
   clearInterval(data.counter);
 
-  $("input:checked").each(function(i) {
+  $("input:checked").each(function() {
     data.userAnswers[$(this).attr("name") - 1] = $(this).val();
   });
-  console.log(data.userAnswers);
+
+  var p = $("<p>").addClass("score");
+  var score = 0;
+
+  data.userAnswers.forEach((user, i) => {
+    if (parseInt(user) === data.answers[i]) {
+      score++;
+    }
+  });
+
+  p.text(
+    "You got " +
+      score +
+      " out of " +
+      data.answers.length +
+      " questions correct!"
+  );
+
+  $("#content").append(p);
 }
 
 $(document).ready(function() {
