@@ -1,6 +1,6 @@
 var data = {
   answers: [3, 4],
-  userAnswers: [0, 0],
+  userAnswers: [],
   timeLeft: 120
 };
 
@@ -27,14 +27,14 @@ function endQuiz() {
   clearInterval(data.counter);
 
   $("input:checked").each(function() {
-    data.userAnswers[$(this).attr("name") - 1] = $(this).val();
+    data.userAnswers[$(this).attr("name") - 1] = parseInt($(this).val());
   });
 
   var p = $("<p>").addClass("score");
   var score = 0;
 
-  data.userAnswers.forEach((user, i) => {
-    if (parseInt(user) === data.answers[i]) {
+  data.answers.forEach((answer, i) => {
+    if (answer === data.userAnswers[i]) {
       score++;
     }
   });
