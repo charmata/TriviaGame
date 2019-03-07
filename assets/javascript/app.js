@@ -1,12 +1,12 @@
 var data = {
-  answers: [3, 1],
+  answers: [3, 4],
   userAnswers: [],
-  timeLeft: 300
+  timeLeft: 120
 };
 
 function startTimer() {
   if (data.timeLeft === 0) {
-    data.timeLeft = 300;
+    data.timeLeft = 120;
   }
   data.counter = setInterval(count, 1000);
 }
@@ -29,4 +29,8 @@ function endQuiz() {
 
 $(document).ready(function() {
   newQuiz();
+
+  $("#submit").on("click", function(e) {
+    e.preventDefault();
+  });
 });
