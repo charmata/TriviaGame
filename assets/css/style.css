@@ -25,6 +25,10 @@ body {
   padding: 20px;
   border-radius: 5px;
 }
+#time-wrapper {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 legend {
   font-weight: bold;
 }

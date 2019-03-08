@@ -1,19 +1,20 @@
 var data = {
   answers: [3, 4, 1, 2, 2, 4, 1, 3, 4, 2],
   userAnswers: [],
-  timeLeft: 120
+  timeLeft: 300
 };
 
 function startTimer() {
   if (data.timeLeft === 0) {
-    data.timeLeft = 120;
+    data.timeLeft = 300;
   }
   data.counter = setInterval(count, 1000);
 }
 
 function count() {
   data.timeLeft--;
-  $("#time").text(data.timeLeft);
+  var time = new Date(data.timeLeft * 1000);
+  $("#time").text(time.toISOString().substr(15, 4));
   if (data.timeLeft === 0) {
     endQuiz();
   }
