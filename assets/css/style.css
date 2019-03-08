@@ -21,15 +21,20 @@ body {
 }
 #content {
   background-color: rgba(249, 239, 144, 0.7);
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 20px;
   border-radius: 5px;
 }
+legend {
+  font-weight: bold;
+}
 label {
   margin-right: 10px;
+  font-size: 1.2rem;
 }
 #submit {
   margin-top: 20px;
+  font-size: 1.2rem;
 }
 .score {
   font-size: 2em;
