@@ -19,12 +19,6 @@ body {
   height: 110%;
   filter: blur(5px);
 }
-.container {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 0;
-}
 #content {
   background-color: rgba(249, 239, 144, 0.7);
   margin-top: 20px;

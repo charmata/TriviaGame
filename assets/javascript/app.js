@@ -1,5 +1,5 @@
 var data = {
-  answers: [3, 4, 1, 2, 2],
+  answers: [3, 4, 1, 2, 2, 4, 1, 3, 4, 2],
   userAnswers: [],
   timeLeft: 120
 };
